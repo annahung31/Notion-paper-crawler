@@ -3,6 +3,7 @@ from notion.client import NotionClient
 from urllib.request import urlretrieve
 import requests
 import os
+from keys import args
 
 invalid_websites = [
     'https://ieeexplore.ieee.org',
@@ -60,11 +61,5 @@ def main(token_v2, output_folder, database_link):
 
 
 if __name__ == '__main__':
-
-    args = dict(
-        token_v2 = 'b0ce408f9ad14a26a1235adfc8f863af882922e99c670b9fa65d5dd281a7c4756526cf3b2613451e7f18bb1c7c6b3470d519f7d67322dae496a88896c131ff4bb908f7d1ca13b0a168c4cb5b8637',
-        output_folder =  '/Users/annahung/Google Drive/My Drive/2_Research/1_Papers',
-        database_link =  'https://www.notion.so/4eb621b5a418488382a44dfa86593f39?v=41888b8ca2a14377979823159f60b0ba'
-    )
-    
+    print(args)
     main(**args)
